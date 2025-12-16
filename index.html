@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="sq">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>For You ❤️</title>
+  <title>Për ty ❤️</title>
   <style>
     body{
       margin:0; height:100vh;
@@ -15,6 +15,7 @@
     .box{ padding:24px; max-width:700px; }
     h1{ font-size:42px; margin:0 0 10px; }
     p{ font-size:18px; margin:0 0 18px; line-height:1.5; }
+    h2{ font-size:28px; margin:0 0 18px; }
     .btns{ margin-top:18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
     button{
       border:0; padding:14px 22px;
@@ -22,43 +23,40 @@
       cursor:pointer;
       box-shadow:0 8px 22px rgba(0,0,0,.08);
     }
-    #yes{ }
     #no{ position:relative; }
     .small{ font-size:14px; opacity:.7; margin-top:14px; }
   </style>
 </head>
 <body>
   <div class="box">
-    <h1>Hey ❤️</h1>
-    <p>I made a tiny page just for you. I have one question…</p>
-    <h2>Do you love me?</h2>
+    <h1>Arta ❤️</h1>
+    <p>E kom bo ni mini faqe veç për ty…</p>
+    <h2>A më don?</h2>
 
     <div class="btns">
-      <button id="yes">Yes 😍</button>
-      <button id="no">No 🙃</button>
+      <button id="yes">Po 😍</button>
+      <button id="no">Jo 🙃</button>
     </div>
 
-    <div class="small">(Tip: try clicking “No” 😄)</div>
+    <div class="small">(Provo me kliku “Jo” 😄)</div>
   </div>
 
   <script>
     const noBtn = document.getElementById("no");
     const yesBtn = document.getElementById("yes");
 
-    // Move the "No" button when hovered (playful)
     noBtn.addEventListener("mouseover", () => {
       noBtn.style.position = "absolute";
       noBtn.style.left = Math.random() * 80 + "%";
       noBtn.style.top  = Math.random() * 80 + "%";
     });
 
-    // Replace page after "Yes"
     yesBtn.addEventListener("click", () => {
       document.body.innerHTML = `
         <div style="height:100vh;display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif;text-align:center;padding:24px;">
           <div>
-            <h1 style="font-size:46px;margin:0 0 12px;">I knew it ❤️</h1>
-            <p style="font-size:20px;margin:0;">Now come here 😄</p>
+            <h1 style="font-size:46px;margin:0 0 12px;">E disha ❤️</h1>
+            <p style="font-size:20px;margin:0;">Hajde tash këtu 😄</p>
           </div>
         </div>
       `;
